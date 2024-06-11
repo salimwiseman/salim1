@@ -807,6 +807,37 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 .hm-footer-copyright p a {color: #888ea5;}
 /*===============================
+    Close Gallery
+===============================*/
+#close-gallery {
+    display: none;
+}
+
+#close-gallery  .close-gallery {
+    position: fixed;
+    left: 10px;
+    /*bottom: 30px;*/
+	top: 100px;
+    display: block;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    background:black; /*#b636ff;*/
+	border:1px solid #b636ff;
+	border-radius:50%;
+	-webkit-transition: .5s; 
+	-moz-transition:.5s; 
+	-ms-transition:.5s; 
+	-o-transition:.5s;
+    transition: .5s;
+	z-index: 2;
+}
+
+/*===============================
     Scroll Top
 ===============================*/
 #scroll-Top  .return-to-top {
@@ -912,7 +943,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   -webkit-backdrop-filter: blur(10px);
   height: 80%;/*100%;*/
   width: 80%;/*100%;*/
-  left: 100px;
+  /*left: 100px;*/
   top: 100px;
   transform: translateY(-100%);
   opacity: 0;
