@@ -998,7 +998,6 @@
 	
 		
 	<section id="conference" class="gallery">
-		<a href="#" class="fas fa-times close2" onclick="closeGallery(); return false;"></a>
 		<center>
 		<div class="thumbs">
 		  <a href="#target00"><img src="assets/images/portfolio/conferences/00.JPG" alt=''></a>
@@ -1161,7 +1160,6 @@
 	 </section>
 	 
 	<section id="training" class="gallery">
-		<a href="#" class="fas fa-times close2" onclick="closeGallery(); return false;"></a>
 		<center>
 		<div class="thumbs">
 		  <a href="#target199"><img src="assets/images/portfolio/training/199.jpg" alt=''></a>
@@ -1355,7 +1353,6 @@
 	 </section>
 	 
 	<section id="trophies" class="gallery">
-		<a href="#" class="fas fa-times close2" onclick="closeGallery(); return false;"></a>
 		<center>
 		<div class="thumbs">
 		  <a href="#target200"><img src="assets/images/portfolio/trophies/200.jpg" alt=''></a>
@@ -1465,9 +1462,14 @@
 			<div id="scroll-Top">
 				<div class="return-to-top">
 					<i class="fa fa-angle-up " id="scroll-top" ></i>
-				</div>
-				
+				</div>				
 			</div><!--/.scroll-Top-->
+			<div id="close-gallery">
+				<div class="close-gallery" onclick="closeGallery(); return false;">
+					<!--<i class="fa fa-angle-up " id="scroll-top" ></i>-->
+					<i class="fa-regular fa-rectangle-xmark"></i>
+				</div>				
+			</div><!--/.close-gallery-->			
 			
         </footer><!--/.footer-copyright-->
 		<!--footer-copyright end-->
@@ -1512,6 +1514,7 @@
 			{
 				let sections = document.getElementsByTagName("section");
 				let galleries = document.getElementsByClassName("gallery");
+				let closeBtn = document.getElementById("close-gallery");
 				let i;
 
 				//open all
@@ -1529,7 +1532,8 @@
 					galleries[i].style.display = "none";
 				  }
 				}				
-				
+
+				closeBtn.style.display = "none";
 				const url = location.href; // Save down the URL without hash.
 				location.href = "#portfolio" // Go to the target element.
 				history.replaceState(null, null, url); // Don't like hashes? Change it back.
@@ -1540,6 +1544,7 @@
 			{
 				let sections = document.getElementsByTagName("section");
 				let gallery = document.getElementById(openOnly);
+				let closeBtn = document.getElementById("close-gallery");
 				let i;
 
 				//close all sections
@@ -1552,6 +1557,7 @@
 
 				//open gallery				
 				gallery.style.display = "flex";
+				closeBtn.style.display = "block";
 				
 				document.body.scrollTop = 0; // For Safari
 				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera				
